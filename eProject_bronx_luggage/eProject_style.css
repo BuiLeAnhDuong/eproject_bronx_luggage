@@ -1,0 +1,33 @@
+*
+{
+	font-family: tahoma; 
+	box-sizing: border-box;
+}
+
+.myNav
+{
+	width: 100%;
+	overflow: auto;
+	/* border-top: 2px double;
+	border-bottom: 2px double;
+	border-left: 2px double;
+	border-right: 2px double; */
+}
+
+.myNav a 
+{
+	width: 20%;
+	float: left;
+	text-align: center; 
+	padding: 10px 1px;
+	color: black;
+	border-top: 2px double;
+	border-bottom: 2px double;
+	border-left: 1px double;
+	border-right: 1px double;
+}
+/* 
+.myNav a:hover
+{
+	background-color: rgb(68, 34, 189);
+} */
