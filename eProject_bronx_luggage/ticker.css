@@ -1,0 +1,19 @@
+body {
+	margin: 0 auto;
+}
+
+.ticker-container {
+	background: rgb(32, 31, 31);
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.ticker-text {
+	height: 150%;
+	color: #fafafa;
+	white-space: nowrap;
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
