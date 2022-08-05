@@ -11,7 +11,7 @@ Bronx Luggage
 
 =======================================
 
-Documentations : https://github.com/L3nhan/doodle_group01/tree/main/Documentations
+Documentations : https://github.com/BuiLeAnhDuong/eproject_bronx_luggage/tree/main/Documentation
 
 =======================================
 
