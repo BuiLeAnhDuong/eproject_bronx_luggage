@@ -15,7 +15,7 @@ Documentations : https://github.com/BuiLeAnhDuong/eproject_bronx_luggage/tree/ma
 
 =======================================
 
-Published website : https://l3nhan.github.io/doodle_group01/
+Published website : https://buileanhduong.github.io/eproject_bronx_luggage/
 
 =======================================
 
