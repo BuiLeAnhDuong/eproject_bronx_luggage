@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  transform: scale(1.025);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+<body>
+<div class="responsive">
+  <div class="gallery">
+      <img src="img/bag-01.jpg" width="600" height="400">
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="img/bag-02.jpg" width="600" height="400">
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="img/bp-01.jpg"  width="600" height="400">
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    
+      <img src="img/lg-01.jpg" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="img/lg-02.jpg"  width="600" height="400">
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery"> 
+      <img src="img/bp-02.jpg"  width="600" height="400">
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery"> 
+      <img src="img/lg-03.jpg"  width="600" height="400">
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery"> 
+      <img src="img/lg-04.jpg"  width="600" height="400">
+  </div>
+</div>
+<div class="clearfix"></div>
+
+</body>
+</html>

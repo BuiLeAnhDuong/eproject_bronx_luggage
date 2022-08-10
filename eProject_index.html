@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- AJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
+
+	<!-- JQuery -->
+	<script src="jquery-3.6.0.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Assignment Resource -->
+	<link rel="stylesheet" href="eProject_style.css">
+	<link rel="stylesheet" href="ticker.css">
+	<!-- <link rel="stylesheet" href="bootstrapCustom.css"> -->
+	<script src="eProject_indexController.js"></script>
+	<script src="visitorCounter.js"></script>
+	<script src="scrolling_ticker.js"></script>
+	<title>Index</title>
+</head>
+
+<body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#!/!">Homepage</a></li>
+				<li><a href="#!/!category">Categories</a></li>
+					<!-- <ol><a href="#">Boy</a></ol>
+					<ol><a href="#">Girl</a></ol> -->
+				<li><a href="#!/!aboutus">About us</a></li>
+				<li><a href="#!/!contactus">Contact us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<div class="navbar-text" id="CounterVisitor" style="margin-top: 30px;">0</div>
+				</li>
+				<li><img src="logo.png" alt="" width="60" height="60" style="margin-top: 5px;"></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div ng-view></div>
+
+	<div class="ticker-container">
+		<div class="ticker-text">
+			<div id="current_date">
+				</p>
+				<script>
+					let finalText = Date()
+
+					function getLocation() {
+						if (navigator.geolocation) {
+							navigator.geolocation.getCurrentPosition(showPosition,showError)
+						} else {
+							finalText = "Browser does not support Geolocation. " + finalText
+							document.getElementById("current_date").innerHTML = finalText;
+						}
+					}
+
+					function showPosition(position) {
+						finalText = "Latitude: " + position.coords.latitude +
+							" Longitude: " + position.coords.longitude + " " + finalText;
+						document.getElementById("current_date").innerHTML = finalText;
+
+						return true
+					}
+
+					function showError(error) {
+						let x = document.getElementById("current_date")
+
+						switch (error.code) {
+							case error.PERMISSION_DENIED:
+								x.innerHTML = "User denied the request for Geolocation."
+								break;
+							case error.POSITION_UNAVAILABLE:
+								x.innerHTML = "Location information is unavailable."
+								break;
+							case error.TIMEOUT:
+								x.innerHTML = "The request to get user location timed out."
+								break;
+							case error.UNKNOWN_ERROR:
+								x.innerHTML = "An unknown error occurred."
+								break;
+						}
+
+						x.innerHTML = x.innerHTML + " " + finalText
+					}
+
+					getLocation() 
+				</script>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		&copy;Copyright Bronx Luggage
+	</footer>
+</body>
+
+</html>

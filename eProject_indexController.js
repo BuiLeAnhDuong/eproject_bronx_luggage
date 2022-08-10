@@ -1,17 +1,26 @@
 var app = angular.module("myApp", ["ngRoute"])
 
 app.config(function($routeProvider) {
+	alert($routeProvider)
 	$routeProvider
 	.when("/!", {
 		templateUrl : "eProject_homepage.html",
 		controller : "myCtrl"
 	})
-	.when('/!list', {
-		templateUrl : "listEmployee.html",
+	.when('/!category', {
+		templateUrl : "Categories.html",
 		controller : "myCtrl"
 	})
-	.when('/!add', {
-		templateUrl : "addEmployee.html",
+	.when('/!contactus', {
+		templateUrl : "Contact.html",
+		controller : "myCtrl"
+	})
+	.when('/!aboutus', {
+		templateUrl : "AboutUs.html",
+		controller : "myCtrl"
+	})
+	.when('/!gallery', {
+		templateUrl : "gallery.html",
 		controller : "myCtrl"
 	})
 	.otherwise({
