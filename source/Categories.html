@@ -1,12 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
+    <link rel="stylesheet" href="./Categories.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 </head>
-<body>
-    
-</body>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="list-group list-group-flush">
+              <form>
+                <h6 style="margin-left:5%">Màu</h6>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="black" name="black" id="black">
+                  <label class="form-check-label" for="black" style="color:black">
+                    Black
+                  </label>
+                </div>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="white" name="white" id="white">
+                  <label class="form-check-label" for="green" style="color:black">
+                    White
+                  </label>
+                </div>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="red" name="red" id="red">
+                  <label class="form-check-label" for="red" style="color:red">
+                    Red
+                  </label>
+                </div>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="green" name="green" id="green">
+                  <label class="form-check-label" for="green" style="color:green">
+                    Green
+                  </label>
+                </div>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="blue" name="blue" id="blue">
+                  <label class="form-check-label" for="green" style="color:blue">
+                    Blue
+                  </label>
+                </div>
+                <div class="form-check" style="margin-left:10%">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="gray" name="gray" id="gray">
+                  <label class="form-check-label" for="green" style="color:gray">
+                    Gray
+                  </label>
+                </div>
+                <h6 style="margin-left:5%; margin-top: 20px;">Loại</h6>
+                <select class="form-select type-select">
+                  <option value="" selected>Tất cả</option>
+                  <option value="Balo laptop">Balo laptop</option>
+                  <option value="Vali kéo">Vali kéo</option>
+                  <option value="Balo thời trang">Balo thời trang</option>
+                  <option value="Túi xách">Túi xách</option>
+                  <option value="Phụ kiện">Phụ kiện</option>
+                </select>
+                <h6 style="margin-left:5%; margin-top: 20px;">Giá</h6>
+                <select class="form-select price-select">
+                  <option value="0" selected>Mọi mức giá</option>
+                  <option value="1">Dưới 100,000đ</option>
+                  <option value="2">Từ 100,000đ đến 500,000đ</option>
+                  <option value="3">Từ 500,000đ đến 1,000,000đ</option>
+                  <option value="4">Từ 1,000,000đ đến 3,000,000đ</option>
+                  <option value="5">Từ 3,000,000đ đến 5,000,000đ</option>
+                  <option value="6">Trên 5,000,000đ</option>
+                </select>
+                <hr>
+              </form>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <!-- Để navbar chỗ này-->
+            
+            <!-- Hết navbar -->
+            <div class="container-fluid">
+                <h1 class="mt-4">Simple Sidebar</h1>
+                <section>
+                    <table class="table table-hover">
+                      <tr>
+                        <th width="3%">ID</th>
+                        <th width="30%">Tên</th> 
+                        <th width="10%">Số lượng</th>
+                        <th width="10%">Loại</th>
+                        <th width="15%">Màu sắc</th>
+                        <th width="10%">Giá</th>
+                        <th width="10%">Giảm giá</th>
+                      </tr>
+                      <tr class="productRow" ng-repeat="product in productList">
+                        <td class="id">{{product.id}}</td>
+                        <td class="name">{{product.name}}</td>
+                        <td class="quantity">{{product.quantity}}</td>
+                        <td class="type">{{product.type}}</td>
+                        <td class="color">{{product.color}}</td>
+                        <td class="price">{{product.price}}</td>
+                        <td class="discount">{{product.discount}}%</td>
+                      </tr>
+                    </table>
+                  </section>
+            </div>
+        </div>
+    </div>
+	</header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./Categories.js"></script>
+
+  </body>
 </html>
