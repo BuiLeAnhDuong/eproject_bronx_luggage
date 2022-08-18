@@ -25,7 +25,7 @@ function search(){
         }
     }
     if (colorList.length==0){
-        colorList = ["red", "blue", "green", "black", "white", "gray"]
+        colorList = ["red", "blue", "white", "yellow", "white", "orange"]
     }
     for (let i=0; i<colorRows.length; i++){
         let flag = true;
@@ -52,21 +52,21 @@ function search(){
     var min = 0;
     var max = Infinity;
     if (priceRange==1){
-        max = 100000;
-    }else if (priceRange==2){
-        min = 100000;
         max = 500000;
-    }else if (priceRange==3){
+    }else if (priceRange==2){
         min = 500000;
         max = 1000000;
-    }else if (priceRange==4){
+    }else if (priceRange==3){
         min = 1000000;
         max = 3000000;
-    }else if (priceRange==5){
+    }else if (priceRange==4){
         min = 3000000;
         max = 5000000;
-    }else if (priceRange==6){
+    }else if (priceRange==5){
         min = 5000000;
+        max = 10000000;
+    }else if (priceRange==6){
+        min = 10000000;
         max = Infinity;
     }
     console.log(priceRange);
