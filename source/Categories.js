@@ -3,7 +3,6 @@ app.controller('myCtrl', function ($scope, $http) {
 $http.get("Categories.json").then(function (rspt) {
     $scope.productList = rspt.data;
 })
-
 });
 var form = document.querySelector('form');
 form.addEventListener('change', function() {
