@@ -21,69 +21,55 @@
             <div class="list-group list-group-flush">
               <form>
                 
-                  <input class="form-check-input color-checkbox" type="checkbox" value="black" name="black" id="black">
-                  <label class="form-check-label" for="black" style="color:black">
-                    Black
+                  <input class="form-check-input color-checkbox" type="checkbox" value="Boy" name="Boy" id="Boy">
+                  <label class="form-check-label" for="black" style="color:rgb(255, 0, 0)">
+                    Boy  <!--  Black -->
                   </label>&ensp;
 
                 
-                  <input class="form-check-input color-checkbox" type="checkbox" value="white" name="white" id="white">
-                  <label class="form-check-label" for="green" style="color:black">
-                    White
+                  <input class="form-check-input color-checkbox" type="checkbox" value="Girl" name="Girl" id="Girl">
+                  <label class="form-check-label" for="green" style="color:rgb(255, 0, 0)">
+                    Girl  <!-- White -->
                   </label>&ensp;
 
-                
-                  <input class="form-check-input color-checkbox" type="checkbox" value="red" name="red" id="red">
-                  <label class="form-check-label" for="red" style="color:red">
-                    Red
-                  </label>&ensp;
-
-                
-                  <input class="form-check-input color-checkbox" type="checkbox" value="green" name="green" id="green">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="Size" name="Size" id="Size">
                   <label class="form-check-label" for="green" style="color:green">
-                    Green
+                    Size  <!-- Green -->
                   </label>&ensp;
 
-                
-                  <input class="form-check-input color-checkbox" type="checkbox" value="blue" name="blue" id="blue">
+                  <input class="form-check-input color-checkbox" type="checkbox" value="colour" name="colour" id="colour">
                   <label class="form-check-label" for="green" style="color:blue">
-                    Blue
-                  </label>&ensp;
-
-                
-                  <input class="form-check-input color-checkbox" type="checkbox" value="gray" name="gray" id="gray">
-                  <label class="form-check-label" for="green" style="color:gray">
-                    Gray
+                    colour  <!-- Blue -->
                   </label>&ensp;
 
                 <select class="form-select type-select">
-                  <option value="" selected>Tất cả</option>
-                  <option value="Balo laptop">Balo laptop</option>
-                  <option value="Vali kéo">Vali kéo</option>
-                  <option value="Balo thời trang">Balo thời trang</option>
-                  <option value="Túi xách">Túi xách</option>
+                  <option value="" selected>All</option>
+                  <option value="Balo laptop">Luggage</option>
+                  <option value="Vali kéo">Bags</option>
+                  <option value="Balo thời trang">BackPacks</option>
+                  <option value="Túi xách">Accessories</option>
                   <option value="Phụ kiện">Phụ kiện</option>
                 </select>&emsp;
                 <select class="form-select price-select">
-                  <option value="0" selected>Mọi mức giá</option>
-                  <option value="1">Dưới 100,000đ</option>
-                  <option value="2">Từ 100,000đ đến 500,000đ</option>
-                  <option value="3">Từ 500,000đ đến 1,000,000đ</option>
-                  <option value="4">Từ 1,000,000đ đến 3,000,000đ</option>
-                  <option value="5">Từ 3,000,000đ đến 5,000,000đ</option>
-                  <option value="6">Trên 5,000,000đ</option>
+                  <option value="0" selected>Any price</option>
+                  <option value="1">less than 100,000 VND</option>
+                  <option value="2">From 100,000 VND to 500,000 VND</option>
+                  <option value="3">From 500,000 VND to 1,000,000 VND</option>
+                  <option value="4">From 1,000,000 VND to 3,000,000 VND</option>
+                  <option value="5">From 3,000,000 VND to 5,000,000 VND</option>
+                  <option value="6">Over 5,000,000 VND</option>
                 </select>
               </form>
             </div>
             <table class="table table-hover">
                 <tr>
                   <th width="3%">ID</th>
-                  <th width="30%">Tên</th> 
-                  <th width="10%">Số lượng</th>
-                  <th width="10%">Loại</th>
-                  <th width="15%">Màu sắc</th>
-                  <th width="10%">Giá</th>
-                  <th width="10%">Giảm giá</th>
+                  <th width="30%">Name</th> 
+                  <th width="10%">Quantily</th>
+                  <th width="10%">Type</th>
+                  <th width="15%">Color</th>
+                  <th width="10%">Price</th>
+                  <th width="10%">Discount</th>
                 </tr>
                 <tr class="productRow" ng-repeat="product in productList">
                   <td class="id">{{product.id}}</td>
