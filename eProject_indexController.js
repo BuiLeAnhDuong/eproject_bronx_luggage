@@ -1,7 +1,6 @@
 var app = angular.module("myApp", ["ngRoute"])
 
 app.config(function($routeProvider) {
-	alert($routeProvider)
 	$routeProvider
 	.when("/!", {
 		templateUrl : "eProject_homepage.html",
