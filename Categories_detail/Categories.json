@@ -1,5 +1,5 @@
 [
-    {"id": 1, "name":"Parkland Edison", "price": 450000, "quantity": 12, "type": "Luggage", "sex": "Unisex",    "color":["White", "Red", "Yellow"],             "discount":"10", "img": "./img/demo_pic.jpg"},
+    {"id": 1, "name":"Parkland Edison", "price": 450000, "quantity": 12, "type": "Luggage", "sex": "Unisex",    "color":["White", "Red", "Yellow"],             "discount":"10", "img": ""},
     {"id": 2, "name":"Herschel Classic", "price": 15000000, "quantity": 34, "type": "Luggage", "sex": "Female", "color":["White", "White", "Orange", "Yellow"],  "discount":"15", "img": "./img/demo_pic.jpg"},
     {"id": 3, "name":"Larita Vela", "price": 750000, "quantity": 12, "type": "Bags", "sex": "Unisex",           "color":["White", "Red", "Black"],              "discount":"10", "img": "./img/demo_pic.jpg"},
     {"id": 4, "name":"Pisani Anika", "price": 3000000, "quantity": 54, "type": "BackPacks", "sex": "Unisex",    "color":["White", "Blue", "Red"],               "discount":"5", "img": "./img/demo_pic.jpg"},
