@@ -2,7 +2,9 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http) {
 $http.get("Categories.json").then(function (rspt) {
     $scope.productList = rspt.data;
+	alert(  $scope.productList)
 })
+
 });
 var form = document.querySelector('form');
 form.addEventListener('change', function() {
@@ -24,20 +26,20 @@ function search(){
             colorList.push(colorCheckboxes[i].value);
         }
     }
-    if (colorList.length==0){
-        colorList = ["red", "blue", "white", "yellow", "white", "orange"]
-    }
-    for (let i=0; i<colorRows.length; i++){
-        let flag = true;
-        for (let j=0; j<colorList.length; j++){
-            if (colorRows[i].innerHTML.includes(colorList[j])){
-                flag = false;
+    if (colorList.length!=0){
+        for (let i = 0; i < colorRows.length; i++) {
+            let flag = true;
+            for (let j = 0; j < colorList.length; j++) {
+                if (colorRows[i].innerHTML.includes(colorList[j])) {
+                    flag = false;
+                }
+            }
+            if (flag == true) {
+                colorRows[i].parentNode.style.display = "none";
             }
         }
-        if (flag==true){
-            colorRows[i].parentNode.style.display = "none";
-        }
     }
+    
     //Xử lý loại
     var typeFormSelect = document.querySelector('.type-select');
     var typeRows = document.querySelectorAll(".type");
@@ -52,21 +54,21 @@ function search(){
     var min = 0;
     var max = Infinity;
     if (priceRange==1){
-        max = 500000;
+        max = 100000;
     }else if (priceRange==2){
+        min = 100000;
+        max = 500000;
+    }else if (priceRange==3){
         min = 500000;
         max = 1000000;
-    }else if (priceRange==3){
+    }else if (priceRange==4){
         min = 1000000;
         max = 3000000;
-    }else if (priceRange==4){
+    }else if (priceRange==5){
         min = 3000000;
         max = 5000000;
-    }else if (priceRange==5){
-        min = 5000000;
-        max = 10000000;
     }else if (priceRange==6){
-        min = 10000000;
+        min = 5000000;
         max = Infinity;
     }
     console.log(priceRange);
@@ -76,3 +78,4 @@ function search(){
         }
     }
 }
+
