@@ -1,33 +1,52 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- RequiRed meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-    <title>detail</title>
-  </head>
-  <body ng-app="myApp" ng-controller="myCtrl">
-	  <!-- Navigation -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categories</title>
+  
+  <!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+  
+  <!-- Assignment Resource -->
+	<link rel="stylesheet" href="../eProject_style.css">
+	<link rel="stylesheet" href="../ticker.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" href="bootstrapCustom.css"> -->
+	<script src="../eProject_indexController.js"></script>
+	<script src="../visitorCounter.js"></script>
+	<script src="../scrolling_ticker.js"></script>
+</head>
 
-  	<br>
-
-  	<!-- Page Content -->
+  <body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="../#!/!">Homepage</a></li>
+          <li><a href="../#!/!gallery">Gallery</a></li>
+          <li><a href="/Categories_detail/Categories.html">Categories</a></li>							
+          <li><a href="../#!/!aboutus">About us</a></li>
+          <li><a href="../#!/!contactus">Contact us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <div class="navbar-text" id="CounterVisitor" style="margin-top: 30px;">0</div>
+          </li>
+          <li><img src="../logo.png" alt="" width="60" height="60" style="margin-top: 5px;"></li>
+        </ul>
+      </div>
+    </nav>
   	<div class="container">
-  		<div class = "row">
+		<div class = "row">
 			<div class = "col-9">
-  			
 				<div class = "row">
-					<div class = col-6>
-						<img class = "img-fluid" style="height:460px; width: 410px" src="{{product.img}}" alt="">
-						<a class="btn btn-outline-danger btn-small" style = "width: 100%; margin: auto;" href="/LTW/xulyyeuthich.php/<?php echo $idfilm?>" a target=”_blank” >Đặt mua</a>
-					</div>
-					<div class = col-6>
-						<div><h3 style = "text-align: center; color: Red;"></h3></div>
+					<div > 
+						<img class = "img-fluid" style="height:460px; width: 410px; float: left;" src="{{product.img}}" alt="">
+						
 						<div>
 							<p>ID: {{product.id}}</p>
 							<p>Name: {{product.name}}</p>
@@ -40,38 +59,103 @@
 							<p>Disount: {{product.discount}}%</p>
 						</div>
 					</div>
+					<div>
+						<a class="btn btn-outline-danger btn-small" style = "float: left; background-color: #dc3545; color:white" a target=”_blank” >Đặt mua</a>
+					</div>
+					
 				</div>
-				
-			</div>
-			
-			<div class="col-3">
-				<h3>Đánh giá sản phẩm</h3>
-				<div class="row">
-					<div class="col-sm-12">
-						<form action="" method="POST">
-						<div class="form-group">
-							<input style = "display: block" type="radio" name="optradio" value = "1">★
-							<input style = "display: block" type="radio" name="optradio" value = "2">★★
-							<input style = "display: block" type="radio" name="optradio" value = "3">★★★
-							<input style = "display: block" type="radio" name="optradio" value = "4">★★★★
-							<input style = "display: block" type="radio" name="optradio" value = "5">★★★★★
-							
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-info" id="saveReview">Đánh giá</button>
-						</div>
-						</form>
+				<div class="col-3">
+					<h4>Đánh giá sản phẩm</h4>
+					<div>
+							<form action="#" method="POST">
+								<div class="form-group">
+									<input style = "display: block" type="radio" name="optradio" id="optradio1" value = "1">
+									<label for="Student">★</label>	
+								</div>
+								<div class="form-group">
+									<input style = "display: block" type="radio" name="optradio" id="optradio2"  value = "2">
+									<label for="Student">★★</label>
+								</div>
+								<div class="form-group">
+									<input style = "display: block" type="radio" name="optradio" id="optradio3"  value = "3">
+									<label for="Student">★★★</label>
+								</div>
+								<div class="form-group">
+									<input style = "display: block" type="radio" name="optradio" id="optradio4"  value = "4">
+									<label for="Student">★★★★</label>
+								</div>
+								<div class="form-group">
+									<input style = "display: block" type="radio" name="optradio" id="optradio5"  value = "5">
+									<label for="Student">★★★★★</label>
+								</div>
+							<div class="form-group">
+								<a class="btn btn-info" id="saveReview">Đánh giá</a>
+							</div>
+							</form>
 					</div>
 				</div>
 			</div>
+			
+			
   		</div>
   	</div>
-
-    <!-- Optional JavaScript -->
-	<script src="./Details.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</div>
+    <div class="ticker-container">
+      <div class="ticker-text">
+        <div id="current_date">
+          <script>
+            let finalText = Date()
+  
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition,showError)
+              } else {
+                finalText = "Browser does not support Geolocation. " + finalText
+                document.getElementById("current_date").innerHTML = finalText;
+              }
+            }
+  
+            function showPosition(position) {
+              finalText = "Latitude: " + position.coords.latitude +
+                " Longitude: " + position.coords.longitude + " " + finalText;
+              document.getElementById("current_date").innerHTML = finalText;
+  
+              return true
+            }
+  
+            function showError(error) {
+              let x = document.getElementById("current_date")
+  
+              switch (error.code) {
+                case error.PERMISSION_DENIED:
+                  x.innerHTML = "User denied the request for Geolocation."
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "Location information is unavailable."
+                  break;
+                case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+                case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+              }
+  
+              x.innerHTML = x.innerHTML + " " + finalText
+            }
+  
+            getLocation() 
+          </script>
+        </div>
+      </div>
+    </div>
+	</header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./Details.js"></script>
+	<footer>
+		&copy;Copyright Bronx Luggage
+	</footer>
   </body>
+  
 </html>

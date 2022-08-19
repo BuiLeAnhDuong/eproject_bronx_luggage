@@ -22,6 +22,10 @@ app.config(function($routeProvider) {
 		templateUrl : "gallery.html",
 		controller : "myCtrl"
 	})
+	.when('/!details', {
+		templateUrl : "/Categories_detail/Details.html",
+		controller : "myCtrl"
+	})
 	.otherwise({
 		templateUrl : "eProject_homepage.html",
 		controller : "myCtrl"
