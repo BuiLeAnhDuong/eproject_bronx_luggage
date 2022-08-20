@@ -1,12 +1,12 @@
 [
-    {"id": 1, "name":"Parkland Edison", "price": 450000, "quantity": 12, "type": "Luggage",     "sex": "Unisex",    "color":["white", "Red", "Yellow"],             "discount":"10",    "img": ""},
-    {"id": 2, "name":"Herschel Classic", "price": 15000000, "quantity": 34, "type": "Luggage",  "sex": "Female",    "color":["white", "white", "Orange", "Yellow"], "discount":"15",    "img": ""},
-    {"id": 3, "name":"Larita Vela", "price": 750000, "quantity": 12, "type": "Bags",            "sex": "Unisex",    "color":["white", "Red", "black"],              "discount":"10",    "img": ""},
-    {"id": 4, "name":"Pisani Anika", "price": 3000000, "quantity": 54, "type": "BackPacks",     "sex": "Unisex",    "color":["white", "blue", "Red"],               "discount":"5",     "img": ""},
-    {"id": 5, "name":"Pisani X9", "price": 77000, "quantity": 22, "type": "Bags",               "sex": "Male",      "color":["blue", "Orange", "Yellow"],           "discount":"20",    "img": ""},
-    {"id": 6, "name":"Pisani Leica", "price": 1050000, "quantity": 12, "type": "BackPacks",     "sex": "Unisex",    "color":["red", "blue", "black"],               "discount":"10",    "img": ""},
-    {"id": 7, "name":"Pisani Roy", "price": 25004000, "quantity": 34, "type": "Accessories",    "sex": "Female",    "color":["white", "Orange", "green", "black"],  "discount":"15",    "img": ""},
-    {"id": 8, "name":"Vivache Navy", "price": 7500000, "quantity": 12, "type": "Accessories",   "sex": "Unisex",    "color":["white", "Red", "black"],              "discount":"10",    "img": ""},
-    {"id": 9, "name":"Legend Walker", "price": 1120000, "quantity": 54, "type": "Bags",         "sex": "Unisex",    "color":["white", "blue", "Red", "Yellow"],     "discount":"5",     "img": ""},
-    {"id": 10, "name":"Austin Reed", "price": 350000, "quantity": 22, "type": "Luggage",        "sex": "Male",      "color":["blue", "Orange", "black"],            "discount":"20",    "img": ""}
+    {"id": 1, "name":"Parkland Edison", "price": 450000, "quantity": 12, "type": "Luggage", "sex": "Unisex",    "color":["White", "Red", "Yellow"],             "discount":"10", "img": ""},
+    {"id": 2, "name":"Herschel Classic", "price": 15000000, "quantity": 34, "type": "Luggage", "sex": "Female", "color":["White", "White", "Orange", "Yellow"],  "discount":"15", "img": "./img/demo_pic.jpg"},
+    {"id": 3, "name":"Larita Vela", "price": 750000, "quantity": 12, "type": "Bags", "sex": "Unisex",           "color":["White", "Red", "Black"],              "discount":"10", "img": "./img/demo_pic.jpg"},
+    {"id": 4, "name":"Pisani Anika", "price": 3000000, "quantity": 54, "type": "BackPacks", "sex": "Unisex",    "color":["White", "Blue", "Red"],               "discount":"5", "img": "./img/demo_pic.jpg"},
+    {"id": 5, "name":"Pisani X9", "price": 77000, "quantity": 22, "type": "Bags", "sex": "Male",                "color":["Blue", "Orange", "Yellow"],           "discount":"20", "img": "./img/demo_pic.jpg"},
+    {"id": 6, "name":"Pisani Leica", "price": 1050000, "quantity": 12, "type": "BackPacks", "sex": "Unisex",    "color":["Red", "Blue", "Black"],               "discount":"10", "img": "./img/demo_pic.jpg"},
+    {"id": 7, "name":"Pisani Roy", "price": 25004000, "quantity": 34, "type": "Accessories", "sex": "Female",   "color":["White", "Orange", "Green", "Black"],  "discount":"15", "img": "./img/demo_pic.jpg"},
+    {"id": 8, "name":"Vivache Navy", "price": 7500000, "quantity": 12, "type": "Accessories", "sex": "Unisex",  "color":["White", "Red", "Black"],              "discount":"10", "img": "./img/demo_pic.jpg"},
+    {"id": 9, "name":"Legend Walker", "price": 1120000, "quantity": 54, "type": "Bags", "sex": "Unisex",        "color":["White", "Blue", "Red", "Yellow"],     "discount":"5", "img": "./img/demo_pic.jpg"},
+    {"id": 10, "name":"Austin Reed", "price": 350000, "quantity": 22, "type": "Luggage", "sex": "Male",         "color":["Blue", "Orange", "Black"],            "discount":"20", "img": "./img/demo_pic.jpg"}
 ]

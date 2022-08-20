@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Categories.js
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http) {
 $http.get("Categories.json").then(function (rspt) {
@@ -17,6 +18,35 @@ function categories(){
         var productRows = document.querySelectorAll(".productRow");
         for (let i=0; i<productRows.length; i++){
             productRows[i].style.display = "table-row";
+=======
+var app = angular.module('myCtrl', []);
+app.controller('myCtrl', function (){
+	// $http.get("Categories.json").then(function (rspt) {
+	// 	$scope.productList = rspt.data;
+	// })
+});
+var form = document.querySelector('form');
+// if (form){
+	form.addEventListener('change', function() {
+		search();
+	});
+// }
+
+function search(){
+    // Reset bảng
+    var productRows = document.querySelectorAll(".productRow");
+    for (let i=0; i<productRows.length; i++){
+        productRows[i].style.display = "table-row";
+    }
+    //Xử lý màu sắc
+    var colorRows = document.querySelectorAll(".color");
+    var colorCheckboxes = document.querySelectorAll(".color-checkbox");
+    var colorList = [];
+    for (let i=0; i<colorCheckboxes.length; i++){
+        if (colorCheckboxes[i].checked == true)
+        {
+            colorList.push(colorCheckboxes[i].value);
+>>>>>>> 55c02bc738b96dbf1b9781c88c3649b0a75b4a11:category_old/Categories.js
         }
         //Xử lý loại
         var colorFormSelect = document.querySelector('.color-select');
