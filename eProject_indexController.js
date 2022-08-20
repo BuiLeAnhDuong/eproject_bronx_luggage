@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
 		controller : "myCtrl"
 	})
 	.when('/!category', {
-		templateUrl : "Categories.html",
+		templateUrl: "/Categories_detail/Categories.html",
 		controller : "myCtrl"
 	})
 	.when('/!contactus', {

@@ -5,157 +5,90 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Categories</title>
-  
-  <!-- Bootstrap -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-  
-  <!-- Assignment Resource -->
-	<link rel="stylesheet" href="../eProject_style.css">
-	<link rel="stylesheet" href="../ticker.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<!-- <link rel="stylesheet" href="bootstrapCustom.css"> -->
-	<script src="../eProject_indexController.js"></script>
-	<script src="../visitorCounter.js"></script>
-	<script src="../scrolling_ticker.js"></script>
 </head>
 
   <body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="../#!/!">Homepage</a></li>
-          <li><a href="../#!/!gallery">Gallery</a></li>
-          <li><a href="/Categories_detail/Categories.html">Categories</a></li>							
-          <li><a href="../#!/!aboutus">About us</a></li>
-          <li><a href="../#!/!contactus">Contact us</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <div class="navbar-text" id="CounterVisitor" style="margin-top: 30px;">0</div>
-          </li>
-          <li><img src="../logo.png" alt="" width="60" height="60" style="margin-top: 5px;"></li>
-        </ul>
-      </div>
-    </nav>
   	<div class="container">
 		<div class = "row">
 			<div class = "col-9">
 				<div class = "row">
 					<div > 
-						<img class = "img-fluid" style="height:460px; width: 410px; float: left;" src="{{product.img}}" alt="">
+						<img class = "img-fluid" id="demo_img" style="height:460px; width: 410px; float: left;" src="" alt="">
 						
 						<div>
-							<p>ID: {{product.id}}</p>
-							<p>Name: {{product.name}}</p>
-							<p>Price: {{product.price}}</p>
-							<p>Quantity: {{product.quantity}}</p>
-							<p>Type: {{product.type}}</p>
-							<p>Producer: {{product.id}}<p>
-							<p>Sex: {{product.sex}}<p>
-							<p>Color: {{product.color}}</p>
-							<p>Disount: {{product.discount}}%</p>
+							<p>ID: <span id="id"></span></p>
+							<p>Name:<span id="name"></span></p>
+							<p>Price:<span id="price"></span></p>
+							<p>Quantity:<span id="quantity"></span></p>
+							<p>Type:<span id="type"></span></p>
+							<p>Sex:<span id="sex"></span><p>
+							<p>Color:<span id="color"></span></p>
+							<p>Disount:<span id="discount"></span>%</p>
+              <p>Rating: <span id="rating"></span> </p>
 						</div>
 					</div>
 					<div>
-						<a class="btn btn-outline-danger btn-small" style = "float: left; background-color: #dc3545; color:white" a target=”_blank” >Đặt mua</a>
+						<a class="btn btn-outline-danger btn-small" id="buy-btn" style = "float: left; background-color: #dc3545; color:white" a target=”_blank” >Buy</a>
 					</div>
 					
 				</div>
 				<div class="col-3">
-					<h4>Đánh giá sản phẩm</h4>
+					<h4>Feedback</h4>
 					<div>
 							<form action="#" method="POST">
 								<div class="form-group">
-									<input style = "display: block" type="radio" name="optradio" id="optradio1" value = "1">
-									<label for="Student">★</label>	
-								</div>
-								<div class="form-group">
-									<input style = "display: block" type="radio" name="optradio" id="optradio2"  value = "2">
-									<label for="Student">★★</label>
-								</div>
-								<div class="form-group">
-									<input style = "display: block" type="radio" name="optradio" id="optradio3"  value = "3">
-									<label for="Student">★★★</label>
-								</div>
-								<div class="form-group">
-									<input style = "display: block" type="radio" name="optradio" id="optradio4"  value = "4">
-									<label for="Student">★★★★</label>
-								</div>
-								<div class="form-group">
-									<input style = "display: block" type="radio" name="optradio" id="optradio5"  value = "5">
-									<label for="Student">★★★★★</label>
+									<label for="rating-select">Rating</label>	
+                  <input name="rating" type="radio" value="1">★&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="rating" type="radio" value="2">★★&nbsp;&nbsp;&nbsp;
+                  <input name="rating" type="radio" value="3">★★★&nbsp;&nbsp;
+                  <input name="rating" type="radio" value="4">★★★★&nbsp;
+                  <input name="rating" type="radio" value="5">★★★★★
+                  <button class="btn btn-info" id="rateProduct">Rate</button>
 								</div>
 							<div class="form-group">
-								<a class="btn btn-info" id="saveReview">Đánh giá</a>
+								
 							</div>
 							</form>
 					</div>
 				</div>
+        <div class="">
+          <h4>Comment</h4>
+          <div>
+            <form action="#" method="POST">
+              <textarea style="width:100%" id="commentTextArea" rows="2" placeholder="What do you think about this product?"></textarea>
+              <button class="btn btn-info" id="commentBtn">Comment</button>
+            </form>
+          </div>
+          <div id="comment_container">
+            
+          </div>
+          <template id="cmtTemplate" style="display: none">
+          
+            <div class="card">
+              <div class="card-header">
+                Commented at: <span class="commentDate"></span>
+              </div>
+              <div class="card-body">
+                <p class="card-text commentText">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </template>
+        </div>
+        
 			</div>
 			
 			
   		</div>
   	</div>
 	</div>
-    <div class="ticker-container">
-      <div class="ticker-text">
-        <div id="current_date">
-          <script>
-            let finalText = Date()
-  
-            function getLocation() {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition,showError)
-              } else {
-                finalText = "Browser does not support Geolocation. " + finalText
-                document.getElementById("current_date").innerHTML = finalText;
-              }
-            }
-  
-            function showPosition(position) {
-              finalText = "Latitude: " + position.coords.latitude +
-                " Longitude: " + position.coords.longitude + " " + finalText;
-              document.getElementById("current_date").innerHTML = finalText;
-  
-              return true
-            }
-  
-            function showError(error) {
-              let x = document.getElementById("current_date")
-  
-              switch (error.code) {
-                case error.PERMISSION_DENIED:
-                  x.innerHTML = "User denied the request for Geolocation."
-                  break;
-                case error.POSITION_UNAVAILABLE:
-                  x.innerHTML = "Location information is unavailable."
-                  break;
-                case error.TIMEOUT:
-                  x.innerHTML = "The request to get user location timed out."
-                  break;
-                case error.UNKNOWN_ERROR:
-                  x.innerHTML = "An unknown error occurred."
-                  break;
-              }
-  
-              x.innerHTML = x.innerHTML + " " + finalText
-            }
-  
-            getLocation() 
-          </script>
-        </div>
-      </div>
-    </div>
+    
 	</header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="./Details.js"></script>
+    
 	<footer>
-		&copy;Copyright Bronx Luggage
+	
 	</footer>
   </body>
-  
+  <script src="./Details.js"></script>
 </html>
