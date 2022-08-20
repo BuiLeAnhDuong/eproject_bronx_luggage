@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Categories_detail/script.js
 function onCategoryLoad(){
     var form = document.querySelector('form');
     form.addEventListener('change', function () {
@@ -40,20 +39,6 @@ function onCategoryLoad(){
     }
     
 }
-=======
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function ($scope, $http) {
-$http.get("Categories.json").then(function (rspt) {
-    $scope.productList = rspt.data;
-	alert(  $scope.productList)
-})
-
-});
-var form = document.querySelector('form');
-form.addEventListener('change', function() {
-    search();
-});
->>>>>>> 55c02bc738b96dbf1b9781c88c3649b0a75b4a11:categoriesScript.js
 function search(){
     //Reset bảng
     var productRows = document.querySelectorAll(".productRow");
@@ -120,7 +105,6 @@ function search(){
             priceRows[i].parentNode.style.display = "none";
         }
     }
-<<<<<<< HEAD:Categories_detail/script.js
     var sexFormSelect = document.querySelector('.sex-select');
     var sexRows = document.querySelectorAll(".sex");
     for (let i = 0; i < sexRows.length; i++) {
@@ -128,7 +112,5 @@ function search(){
             sexRows[i].parentNode.style.display = "none";
         }
     }
-=======
->>>>>>> 55c02bc738b96dbf1b9781c88c3649b0a75b4a11:categoriesScript.js
 }
 
